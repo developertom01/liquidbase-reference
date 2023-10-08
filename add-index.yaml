@@ -1,12 +1,18 @@
 databaseChangeLog:
   - changeSet:
-      id: add-index-id
+      id: create-index-id
       author: your_name
       changes:
         - createIndex:
             indexName: index_name
             tableName: your_table
             unique: false
+            clustered: false
+            associatedWith: associated_column
             columns:
               - column:
-                  name: column_to_index
+                  name: column1
+                  descending: true
+              - column:
+                  name: column2
+                  descending: false
