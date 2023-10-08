@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-view-id
+      author: your_name
+      changes:
+        - createView:
+            viewName: your_view
+            selectQuery: "SELECT column1, column2 FROM your_table"
+            replaceIfExists: true

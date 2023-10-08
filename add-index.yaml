@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-index-id
+      author: your_name
+      changes:
+        - createIndex:
+            indexName: index_name
+            tableName: your_table
+            unique: false
+            columns:
+              - column:
+                  name: column_to_index

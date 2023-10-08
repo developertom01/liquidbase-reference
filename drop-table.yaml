@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-table-id
+      author: your_name
+      changes:
+        - dropTable:
+            tableName: your_table
+adding

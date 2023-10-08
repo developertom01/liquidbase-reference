@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: rename-table-id
+      author: your_name
+      changes:
+        - renameTable:
+            oldTableName: old_table_name
+            newTableName: new_table_name

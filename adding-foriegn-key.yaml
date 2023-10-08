@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-foreign-key-id
+      author: your_name
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: your_table
+            columnNames: foreign_key_column
+            constraintName: fk_name
+            referencedTableName: referenced_table
+            referencedColumnNames: referenced_column
+            onDelete: CASCADE
+            onUpdate: CASCADE

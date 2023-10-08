@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: drop-column-id
+      author: your_name
+      changes:
+        - dropColumn:
+            tableName: your_table
+            columnName: column_to_drop

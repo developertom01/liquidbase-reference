@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: remove-index-id
+      author: your_name
+      changes:
+        - dropIndex:
+            indexName: index_name
+            tableName: your_table

@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - changeSet:
+      id: custom-sql-id
+      author: your_name
+      changes:
+        - sql:
+            sql: "YOUR CUSTOM SQL STATEMENT"
