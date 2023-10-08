@@ -9,8 +9,37 @@ databaseChangeLog:
               - column:
                   name: id
                   type: INT
+                  autoIncrement: true
                   constraints:
                     primaryKey: true
               - column:
-                  name: column_name
+                  name: column1
                   type: VARCHAR(255)
+                  defaultValue: 'default_value'
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: column2
+                  type: INT
+                  constraints:
+                    references:
+                      tableName: other_table
+                      columnName: other_column
+                      onDelete: CASCADE
+                      onUpdate: CASCADE
+              - column:
+                  name: column3
+                  type: DATE
+                  constraints:
+                    checkConstraint: "column3 > '2000-01-01'"
+              - column:
+                  name: column4
+                  type: BOOLEAN
+                  constraints:
+                    checkConstraint: "column4 IN (true, false)"
+              - column:
+                  name: column5
+                  type: DECIMAL(10, 2)
+                  constraints:
+                    checkConstraint: "column5 >= 0"
